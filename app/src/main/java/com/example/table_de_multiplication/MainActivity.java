@@ -36,5 +36,16 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+        btnAfficher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int num = Integer.parseInt(nbrSaisi.getText().toString());
+                StringBuffer txt = new StringBuffer();
+                for (int i = 0; i <= 10; i++) {
+                    txt.append(String.format("%d * %d = %d \n",num,i,num*i));
+                }
+                textAfficher.setText(txt);
+            }
+        });
     }
 }
