@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btnEffacer,btnAfficher,btnQuitter;
@@ -39,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
         btnAfficher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(nbrSaisi.getText().toString().isEmpty()){
+                    Toast.makeText(MainActivity.this, "Veuillez saisir un entier !!!", Toast.LENGTH_SHORT).show();
+                    btnEffacer.callOnClick();
+                    return;
+                }
                 int num = Integer.parseInt(nbrSaisi.getText().toString());
                 StringBuffer txt = new StringBuffer();
                 for (int i = 0; i <= 10; i++) {
