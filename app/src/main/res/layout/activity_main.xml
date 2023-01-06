@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutT"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="32dp"
@@ -11,18 +12,23 @@
         android:id="@+id/nbrSaisi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnColor2" />
 
     <Button
         android:id="@+id/btnEffacer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:background="#2D41F1"
         android:text="réinitialiser"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nbrSaisi" />
@@ -32,7 +38,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="#2D41F1"
         android:text="afficher"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEffacer" />
@@ -41,7 +50,10 @@
         android:id="@+id/btnQuitter"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="#2D41F1"
         android:text="quitter"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -58,4 +70,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAfficher" />
+
+    <Button
+        android:id="@+id/btnColor1"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnColor2"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/pink"
+        app:layout_constraintEnd_toStartOf="@+id/btnColor3"
+        app:layout_constraintStart_toEndOf="@+id/btnColor1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnColor3"
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:background="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
