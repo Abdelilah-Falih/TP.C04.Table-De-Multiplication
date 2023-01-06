@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nbrSaisi" />
 
     <Button
-        android:id="@+id/tbnAfficher"
+        android:id="@+id/btnAfficher"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -57,5 +57,5 @@
         app:layout_constraintBottom_toTopOf="@+id/btnQuitter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbnAfficher" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAfficher" />
 </androidx.constraintlayout.widget.ConstraintLayout>
